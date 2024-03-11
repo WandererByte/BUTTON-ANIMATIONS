@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f3e9e9;
+}
+
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.animated-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Click To Reveal Animaiton */
+.click-reveal {
+    position: relative;
+    background: #79a725;
+}
+
+.click-reveal::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: #2980b9;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.click-reveal:active::before {
+    width: 100%;
+    content: "Hello";
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* Click To Fade Out Animation */
+.click-fade-out {
+    transition: opacity 0.3s ease-in-out;
+    background: #4825a7;
+}
+
+.click-fade-out:active {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Click To Rubber Band Animation */
+.click-rubber-band {
+    background: #10323f;
+}
+
+.click-rubber-band:active {
+    animation: rubberBand 0.5s ease-in-out;
+}
+
+@keyframes rubberBand {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.25);
+    }
+    40% {
+        transform: scale(0.95);
+    }
+    60% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Click To Wobble Animation */
+.click-wobble {
+    background: #248a8d;
+}
+
+.click-wobble:active {
+    animation: wobble 0.5s infinite;
+}
+
+@keyframes wobble {
+    0%, 100% {
+        transform: scale(1);
+    }
+    15%, 75% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    30%, 60% {
+        transform: scale(0.9) rotate(-5deg);
+    }
+}
+
+
+/* Click To Swirl Animation */
+.click-swirl {
+    background: #1ea059;
+}
+
+.click-swirl:active {
+    animation: swirl 0.5s linear forwards;
+}
+
+@keyframes swirl {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
