@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animated-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    margin: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    color: #fff;
+}
+
+
+/* Jelly Animation */
+.click-jelly {
+    background: #3498db;
+}
+
+.click-jelly:active {
+    animation: jelly 0.5s alternate infinite;
+}
+
+@keyframes jelly {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Ping Animation */
+.click-ping {
+    background: #ff6b6b;
+}
+
+.click-ping:active {
+    animation: ping 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) alternate infinite;
+}
+
+@keyframes ping {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
+/* Spiral Animation */
+.click-spiral {
+    background: #2980b9;
+}
+
+.click-spiral:active {
+    animation: spiral 0.5s cubic-bezier(0.36, 0.1, 0.8, 0.32) alternate infinite;
+}
+
+@keyframes spiral {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+
+/* ZigZag Animation */
+.click-zigzag {
+    background: #1411a0;
+}
+
+.click-zigzag:active {
+    animation: zigzag 0.5s alternate infinite;
+}
+
+@keyframes zigzag {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(5px) translateY(-5px);
+    }
+    50% {
+        transform: translateX(-5px) translateY(5px);
+    }
+    75% {
+        transform: translateX(5px) translateY(-5px);
+    }
+    100% {
+        transform: translateX(-5px) translateY(5px);
+    }
+}
+
+
+/* Explosion Animation */
+.click-explosion {
+    background: #7e0e0e;
+}
+
+.click-explosion:active {
+    animation: explode 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}

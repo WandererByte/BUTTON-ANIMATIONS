@@ -1,0 +1,155 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #ecd9d9;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.animated-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  margin: 35px;
+}
+
+/* ROTATE & SCALE BUTTON ANIMATION*/
+/*
+.rotate-scale{
+    background: #3498db;
+    animation: rotate-scale 2s infinite;
+}
+
+@keyframes rotate-scale {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+*/
+
+/* FLICKER BUTTON ANIMATION */
+/*
+.flicker {
+    background: #ff6b6b;
+    animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+*/
+
+/* SHOCKWAVE BUTTON ANIMATION*/
+/*
+.shockwave {
+    background: #2980b9;
+    animation: shockwave 1s infinite;
+}
+
+@keyframes shockwave {
+    0% {
+        box-shadow: 0 0 10px rgba(41, 121, 185, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(41, 121, 185, 0.7);
+        transform: scale(1.2);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(41, 121, 185, 0.7);
+    }
+}
+*/
+
+/* ANIMATION EFFECT WHEN WE HOVERED OVER BUTTON */
+
+/* ROTATE & SCALE BUTTON ANIMATION WHEN HOVERED*/
+.rotate-scale {
+  background: #3498db;
+}
+
+.rotate-scale:hover {
+  animation: rotate-scale 2s infinite;
+}
+
+@keyframes rotate-scale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* FLICKER BUTTON ANIMATION WHEN HOVERED*/
+.flicker {
+  background: #ff6b6b;
+}
+
+.flicker:hover {
+  animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* SHOCKWAVE BUTTON ANIMATION WHEN HOVERED*/
+.shockwave {
+  background: #2980b9;
+}
+
+.shockwave:hover {
+  animation: shockwave 1s infinite;
+}
+
+@keyframes shockwave {
+  0% {
+    box-shadow: 0 0 10px rgba(41, 121, 185, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(41, 121, 185, 0.7);
+    transform: scale(1.2);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(41, 121, 185, 0.7);
+  }
+}

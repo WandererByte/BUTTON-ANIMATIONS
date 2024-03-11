@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eee2e2;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animated-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.click-scale{
+    background: #3498db;
+}
+
+.click-scale:active {
+    transform: scale(1.5);
+}
+
+.click-spin {
+    background: #ff6b6b;
+    transition: transform 0.3s;
+}
+
+.click-spin:active {
+    transform: rotate(360deg);
+}
+
+.click-fade {
+    background: #2980b9;
+}
+
+.click-fade:active {
+    opacity: 0.5;
+}
+
+.click-pop {
+    background: #34ad7f;
+}
+
+.click-pop:active {
+    animation: pop 0.2s ease-in-out;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.click-slide {
+    background: #28be49;
+    transition: transform 0.3s;
+}
+
+.click-slide:active {
+    transform: translateY(5px);
+}
